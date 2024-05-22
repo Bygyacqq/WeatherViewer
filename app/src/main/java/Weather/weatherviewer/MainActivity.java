@@ -93,7 +93,8 @@ public class MainActivity extends AppCompatActivity {
 
     private class Weather {
         public Weather(long dt, double min, double max, double humidity, String description, String icon) {
-            
+
+
         }
     }
 
@@ -237,14 +238,14 @@ public class MainActivity extends AppCompatActivity {
                 JSONObject weather = day.getJSONArray("weather").getJSONObject(0);
                 weatherList.add(new Weather(
                         day.getLong("dt"),
-                        temperatures.getDouble("min"),
-                        temperatures.getDouble("max"),
+                        temperatures.getDouble("temp_min"),
+                        temperatures.getDouble("temp_max"),
                         day.getDouble("humidity"),
                         weather.getString("description"),
                         weather.getString("icon")));
             }
         }
-        catch (Exception e)
+        catch (JSONException e)
         {
             e.printStackTrace();
         }

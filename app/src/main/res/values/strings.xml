@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">WeatherViewer</string>
     <string name="api_key" translatable="false">8fce76c4ae639b43514e5b0ba7ff40d8</string>
-    <string name="web_service_url" translatable="false">http://api.openweathermap.org/data/2.5/forecast/daily?q=</string>
+    <string name="web_service_url" translatable="false">https://api.openweathermap.org/data/2.5/forecast?q=</string>
     <string name="invalid_url">Invalid url</string>
     <string name="weather_condition_image">a graphical representation of the weather conditions</string>
     <string name="high_temp">High: %s</string>
