@@ -1,7 +1,5 @@
 package Weather.weatherviewer;
-
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.database.DataSetObserver;
 import android.os.Bundle;
 import android.os.Bundle;
