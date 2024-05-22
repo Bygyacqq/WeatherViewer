@@ -92,6 +92,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private class Weather {
+        public Weather(long dt, double min, double max, double humidity, String description, String icon) {
+            
+        }
     }
 
     private class WeatherArrayAdapter implements ListAdapter {
@@ -223,6 +226,27 @@ public class MainActivity extends AppCompatActivity {
 
     private void convertJSONtoArrayList(JSONObject forecast)
     {
-        
+        weatherList.clear();
+        try
+        {
+            JSONArray list = forecast.getJSONArray("list");
+            for (int i = 0; i<list.length(); i++)
+            {
+                JSONObject day = list.getJSONObject(i);
+                JSONObject temperatures = day.getJSONObject("temp");
+                JSONObject weather = day.getJSONArray("weather").getJSONObject(0);
+                weatherList.add(new Weather(
+                        day.getLong("dt"),
+                        temperatures.getDouble("min"),
+                        temperatures.getDouble("max"),
+                        day.getDouble("humidity"),
+                        weather.getString("description"),
+                        weather.getString("icon")));
+            }
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+        }
     }
 }
