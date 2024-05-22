@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">WeatherViewer</string>
+    <string name="invalid_url">URL inválida</string>
+    <string name="weather_condition_image">Una representación gráfica de las condiciones cimáticas</string>
+    <string name="high_temp">Alto: %s</string>
+    <string name="low_temp">Bajo: %s</string>
+    <string name="humidity">Humedad: %s</string>
+    <string name="hint_text">Ingrese una ciudad (p. ej, Boston, MA, EE. UU.)</string>
+    <string name="read_error">No se pueden leer los datos metereológicos</string>
+    <string name="connect_error">No se pudo conectar a OpenWeatherMap.org</string>
+</resources>
