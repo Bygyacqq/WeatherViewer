@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/coordinatorLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -26,5 +27,43 @@
         app:layout_anchorGravity="center"
         app:layout_constraintStart_toStarOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="423dp"
+        android:layout_height="721dp">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="408dp"
+            android:layout_height="53dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.091"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="2dp">
+
+            <EditText
+                android:id="@+id/LocationEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="@string/hint_text"
+                android:minHeight="48dp" />
+
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab"
+            android:layout_width="wrap_content"
+            android:layout_height="69dp"
+            android:layout_gravity="top|end"
+            android:clickable="true"
+            android:contentDescription="@string/done_button"
+            android:src="@drawable/done"
+            tools:ignore="MissingConstraints,SpeakableTextPresentCheck"
+            tools:layout_editor_absoluteX="354dp"
+            tools:layout_editor_absoluteY="90dp"
+            tools:srcCompat="@drawable/done" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
